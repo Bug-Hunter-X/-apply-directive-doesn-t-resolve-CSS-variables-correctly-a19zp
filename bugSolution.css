@@ -1,0 +1,14 @@
+The best solution is to avoid using `@apply` with CSS variables. Directly apply the styles in your class definition:
+
+```css
+/* bugSolution.css */
+:root {
+  --my-color: blue;
+}
+
+.my-class {
+  background-color: var(--my-color);
+}
+```
+
+This ensures the variable is correctly resolved and the expected styles are applied.  Consider refactoring any `@apply` directives that rely on CSS variables to use direct style application instead.
